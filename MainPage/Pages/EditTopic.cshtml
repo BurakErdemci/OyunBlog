@@ -1,0 +1,34 @@
+@page "{id:int}"
+@model MainPage.Pages.Shared.EditTopicModel
+@{
+    ViewData["Title"] = "Konu Düzenle";
+}
+
+<h2>Konu Düzenle</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Topic.Id" />
+    <div class="form-group mb-3">
+        <label asp-for="Topic.Title" class="form-label"></label>
+        <input asp-for="Topic.Title" class="form-control" />
+        <span asp-validation-for="Topic.Title" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="Topic.CategoryId" class="form-label"></label>
+        <select asp-for="Topic.CategoryId" class="form-control" asp-items="Model.CategoryList">
+            <option value="0">Kategori Seçin</option>
+        </select>
+        <span asp-validation-for="Topic.CategoryId" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="Topic.Content" class="form-label"></label>
+        <textarea asp-for="Topic.Content" class="form-control" rows="8"></textarea>
+        <span asp-validation-for="Topic.Content" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+    <a asp-page="/Forum" class="btn btn-secondary">İptal</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} 

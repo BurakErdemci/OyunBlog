@@ -1,0 +1,12 @@
+C:\visual studio codes\WebGames\Utilities\bin\Debug\net8.0\Utilities.deps.json
+C:\visual studio codes\WebGames\Utilities\bin\Debug\net8.0\Utilities.dll
+C:\visual studio codes\WebGames\Utilities\bin\Debug\net8.0\Utilities.pdb
+C:\visual studio codes\WebGames\Utilities\obj\Debug\net8.0\Utilities.csproj.AssemblyReference.cache
+C:\visual studio codes\WebGames\Utilities\obj\Debug\net8.0\Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\visual studio codes\WebGames\Utilities\obj\Debug\net8.0\Utilities.AssemblyInfoInputs.cache
+C:\visual studio codes\WebGames\Utilities\obj\Debug\net8.0\Utilities.AssemblyInfo.cs
+C:\visual studio codes\WebGames\Utilities\obj\Debug\net8.0\Utilities.csproj.CoreCompileInputs.cache
+C:\visual studio codes\WebGames\Utilities\obj\Debug\net8.0\Utilities.dll
+C:\visual studio codes\WebGames\Utilities\obj\Debug\net8.0\refint\Utilities.dll
+C:\visual studio codes\WebGames\Utilities\obj\Debug\net8.0\Utilities.pdb
+C:\visual studio codes\WebGames\Utilities\obj\Debug\net8.0\ref\Utilities.dll

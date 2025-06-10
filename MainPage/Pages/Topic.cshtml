@@ -1,0 +1,99 @@
+@page "{id:int}"
+@model MainPage.Pages.TopicModel
+
+@{
+    ViewData["Title"] = Model.Topic?.Title ?? "Konu Detayı";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Ana Konu -->
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">@Model.Topic?.Title</h2>
+                    <small class="text-muted">
+                        @Model.Topic?.CreatedAt.ToString("dd/MM/yyyy HH:mm")
+                    </small>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div>
+                            <span class="badge bg-primary">@Model.Topic?.Category?.Name</span>
+                            <span class="text-muted ms-2">
+                                <i class="fas fa-eye"></i> @Model.Topic?.ViewCount görüntülenme
+                            </span>
+                        </div>
+                        <div>
+                            <span class="text-muted">
+                                <i class="fas fa-user"></i> @Model.Topic?.User?.UserName
+                            </span>
+                        </div>
+                    </div>
+                    <div class="topic-content">
+                        @Html.Raw(Model.Topic?.Content)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yanıtlar -->
+            <h3 class="mb-3">Yanıtlar (@Model.Topic?.ReplyCount)</h3>
+            @if (Model.Topic?.Replies != null)
+            {
+                foreach (var reply in Model.Topic.Replies.OrderBy(r => r.CreatedAt))
+                {
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <strong>@reply.User?.UserName</strong>
+                                </div>
+                                <small class="text-muted">
+                                    @reply.CreatedAt.ToString("dd/MM/yyyy HH:mm")
+                                </small>
+                            </div>
+                            <div class="reply-content">
+                                @Html.Raw(reply.Content)
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+            <!-- Yanıt Formu -->
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h4 class="mb-0">Yanıt Yaz</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <input type="hidden" name="TopicId" value="@Model.Topic?.Id" />
+                            <div class="form-group">
+                                <textarea name="Content" class="form-control" rows="4" required></textarea>
+                            </div>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-primary">Yanıt Gönder</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info mt-4">
+                    Yanıt yazabilmek için <a asp-page="/Account/Login">giriş yapın</a>.
+                </div>
+            }
+
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-page="/EditTopic" asp-route-id="@Model.Topic.Id" class="btn btn-warning btn-sm">Düzenle</a>
+                <form asp-page-handler="Delete" asp-route-id="@Model.Topic.Id" method="post" style="display:inline;">
+                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bu konuyu silmek istediğinize emin misiniz?');">Sil</button>
+                </form>
+            }
+        </div>
+    </div>
+</div> 

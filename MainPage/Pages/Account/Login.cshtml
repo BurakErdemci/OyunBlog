@@ -1,0 +1,32 @@
+@page
+@model MainPage.Pages.Account.LoginModel
+@{
+    ViewData["Title"] = "Giriş Yap";
+}
+
+<h2>Giriş Yap</h2>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div style="color:red;">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div>@error.ErrorMessage</div>
+        }
+    </div>
+}
+
+<form method="post">
+    @Html.AntiForgeryToken()
+    <div>
+        <label for="UserName">Kullanıcı Adı</label>
+        <input type="text" id="UserName" name="UserName" required />
+    </div>
+    <div>
+        <label for="Password">Şifre</label>
+        <input type="password" id="Password" name="Password" required />
+    </div>
+    <button type="submit">Giriş Yap</button>
+</form>
+
+<a href="/Account/Register">Kayıt Ol</a> 

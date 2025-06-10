@@ -1,0 +1,62 @@
+@page
+@model MainPage.Pages.CreateTopicModel
+@using Microsoft.AspNetCore.Identity
+
+@{
+    ViewData["Title"] = "Yeni Konu Oluştur";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="mb-0">Yeni Konu Oluştur</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group mb-3">
+                            <label asp-for="Topic.Title" class="control-label">Başlık</label>
+                            <input asp-for="Topic.Title" class="form-control" required />
+                            <span asp-validation-for="Topic.Title" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Topic.CategoryId" class="control-label">Kategori</label>
+                            <select asp-for="Topic.CategoryId" class="form-control" asp-items="Model.CategoryList">
+                                <option value="0">Kategori Seçin</option>
+                            </select>
+                            <span asp-validation-for="Topic.CategoryId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Topic.Content" class="control-label">İçerik</label>
+                            <textarea asp-for="Topic.Content" class="form-control" rows="10" required></textarea>
+                            <span asp-validation-for="Topic.Content" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Konu Oluştur</button>
+                            <a asp-page="/Forum" class="btn btn-secondary">İptal</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        Lütfen eksik veya hatalı alanları düzeltin.<br />
+        @foreach (var modelError in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div class="text-danger">@modelError.ErrorMessage</div>
+        }
+    </div>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 

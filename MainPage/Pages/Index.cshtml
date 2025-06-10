@@ -1,0 +1,60 @@
+@page
+@model MainPage.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Oyunlar";
+}
+
+<!-- Banner -->
+<section id="banner">
+    <div class="content">
+        <header>
+            <h1>Oyun Blog'a Hoşgeldiniz</h1>
+            <p>En yeni oyunlar, güncel haberler ve indirimler burada!</p>
+        </header>
+        <p>Oyun dünyasından en güncel içerikler, oyunlarımız ve daha fazlası için bizi takip edin.</p>
+    </div>
+    <span class="image object">
+        <img src="~/Uploads/main.jpg" alt="Oyun Blog Banner" style="object-fit:cover; width:100%; height:400px; border-radius:8px; display:block;" />
+    </span>
+</section>
+
+<!-- Haberler Bölümü -->
+<section id="news" class="news-section" style="margin-top:2rem;">
+    <header>
+        <h2>Teknoloji Haberleri</h2>
+    </header>
+    <div class="news-list">
+        @if (Model.News != null && Model.News.Any())
+        {
+            foreach (var news in Model.News.Take(6))
+            {
+                <div class="news-card" style="display:flex; flex-direction:row; align-items:flex-start; margin-bottom:2rem; box-shadow:0 2px 8px #ddd; border-radius:8px; overflow:hidden;">
+                    @if (!string.IsNullOrEmpty(news.ImageUrl))
+                    {
+                        <img src="@news.ImageUrl" alt="@news.Title" style="width:260px; height:180px; object-fit:cover; flex-shrink:0;" />
+                    }
+                    <div style="padding:1.5rem; flex:1;">
+                        <h5 style="font-size:1.3rem; font-weight:bold;">@news.Title</h5>
+                        <p style="font-size:1rem; color:#555;">@news.Description</p>
+                        <a href="@news.Url" target="_blank" class="news-btn" style="background:#fff; color:#222; border:1.5px solid #222; padding:0.5rem 1.2rem; border-radius:4px; text-decoration:none; font-weight:600; transition:all 0.2s; display:inline-block; margin-top:1rem;">Devamı</a>
+                        <div style="font-size:0.9rem; color:#888; margin-top:0.5rem;">@news.PublishedAt.ToString("dd.MM.yyyy HH:mm")</div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div>Haberler yüklenemedi veya bulunamadı.</div>
+        }
+    </div>
+</section>
+
+<!-- Buraya haberler bölümü eklenebilir -->
+<style>
+.news-btn:hover {
+    background: #222 !important;
+    color: #fff !important;
+    border-color: #222 !important;
+}
+</style> 

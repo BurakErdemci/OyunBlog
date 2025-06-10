@@ -1,0 +1,17 @@
+C:\visual studio codes\WebGames\Data\bin\Debug\net8.0\Data.deps.json
+C:\visual studio codes\WebGames\Data\bin\Debug\net8.0\Data.dll
+C:\visual studio codes\WebGames\Data\bin\Debug\net8.0\Data.pdb
+C:\visual studio codes\WebGames\Data\bin\Debug\net8.0\Core.dll
+C:\visual studio codes\WebGames\Data\bin\Debug\net8.0\Utilities.dll
+C:\visual studio codes\WebGames\Data\bin\Debug\net8.0\Core.pdb
+C:\visual studio codes\WebGames\Data\bin\Debug\net8.0\Utilities.pdb
+C:\visual studio codes\WebGames\Data\obj\Debug\net8.0\Data.csproj.AssemblyReference.cache
+C:\visual studio codes\WebGames\Data\obj\Debug\net8.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\visual studio codes\WebGames\Data\obj\Debug\net8.0\Data.AssemblyInfoInputs.cache
+C:\visual studio codes\WebGames\Data\obj\Debug\net8.0\Data.AssemblyInfo.cs
+C:\visual studio codes\WebGames\Data\obj\Debug\net8.0\Data.csproj.CoreCompileInputs.cache
+C:\visual studio codes\WebGames\Data\obj\Debug\net8.0\Data.csproj.Up2Date
+C:\visual studio codes\WebGames\Data\obj\Debug\net8.0\Data.dll
+C:\visual studio codes\WebGames\Data\obj\Debug\net8.0\refint\Data.dll
+C:\visual studio codes\WebGames\Data\obj\Debug\net8.0\Data.pdb
+C:\visual studio codes\WebGames\Data\obj\Debug\net8.0\ref\Data.dll

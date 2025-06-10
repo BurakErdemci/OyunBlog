@@ -1,0 +1,44 @@
+@page
+@model MainPage.Pages.Account.RegisterModel
+@{
+    ViewData["Title"] = "Kayıt Ol";
+}
+
+<h2>Kayıt Ol</h2>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div style="color:red;">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div>@error.ErrorMessage</div>
+        }
+    </div>
+}
+
+<form method="post">
+    @Html.AntiForgeryToken()
+    <div>
+        <label for="UserName">Kullanıcı Adı</label>
+        <input type="text" id="UserName" name="UserName" asp-for="UserName" required />
+    </div>
+    <div>
+        <label for="Email">E-posta</label>
+        <input type="email" id="Email" name="Email" asp-for="Email" required />
+    </div>
+    <div>
+        <label for="Password">Şifre</label>
+        <input type="password" id="Password" name="Password" asp-for="Password" required />
+    </div>
+    <div>
+        <label for="ConfirmPassword">Şifre Tekrar</label>
+        <input type="password" id="ConfirmPassword" name="ConfirmPassword" asp-for="ConfirmPassword" required />
+    </div>
+    <button type="submit">Kayıt Ol</button>
+</form>
+
+<a href="/Account/Login">Giriş Yap</a>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
