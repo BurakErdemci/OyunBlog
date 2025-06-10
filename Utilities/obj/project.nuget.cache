@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n+omrXwOO4g=",
+  "dgSpecHash": "eGwCl3w4qq0=",
   "success": true,
-  "projectFilePath": "C:\\visual studio codes\\WebGames\\Utilities\\Utilities.csproj",
+  "projectFilePath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\burcu\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.16\\microsoft.entityframeworkcore.8.0.16.nupkg.sha512",
     "C:\\Users\\burcu\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.16\\microsoft.entityframeworkcore.abstractions.8.0.16.nupkg.sha512",

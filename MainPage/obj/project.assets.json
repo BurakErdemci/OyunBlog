@@ -4687,11 +4687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\visual studio codes\\WebGames\\MainPage\\MainPage.csproj",
+      "projectUniqueName": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\MainPage\\MainPage.csproj",
       "projectName": "MainPage",
-      "projectPath": "C:\\visual studio codes\\WebGames\\MainPage\\MainPage.csproj",
+      "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\MainPage\\MainPage.csproj",
       "packagesPath": "C:\\Users\\burcu\\.nuget\\packages\\",
-      "outputPath": "C:\\visual studio codes\\WebGames\\MainPage\\obj\\",
+      "outputPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\MainPage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4713,14 +4713,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\visual studio codes\\WebGames\\BusinessLogic\\BusinessLogic.csproj": {
-              "projectPath": "C:\\visual studio codes\\WebGames\\BusinessLogic\\BusinessLogic.csproj"
+            "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\BusinessLogic\\BusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\BusinessLogic\\BusinessLogic.csproj"
             },
-            "C:\\visual studio codes\\WebGames\\Core\\Core.csproj": {
-              "projectPath": "C:\\visual studio codes\\WebGames\\Core\\Core.csproj"
+            "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\Core.csproj"
             },
-            "C:\\visual studio codes\\WebGames\\Utilities\\Utilities.csproj": {
-              "projectPath": "C:\\visual studio codes\\WebGames\\Utilities\\Utilities.csproj"
+            "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj": {
+              "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SrV27Ta/yuY=",
+  "dgSpecHash": "sujJyhkSVIA=",
   "success": true,
-  "projectFilePath": "C:\\visual studio codes\\WebGames\\BusinessLogic\\BusinessLogic.csproj",
+  "projectFilePath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\BusinessLogic\\BusinessLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\burcu\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\burcu\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

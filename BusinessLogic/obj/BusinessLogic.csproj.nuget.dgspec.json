@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\visual studio codes\\WebGames\\BusinessLogic\\BusinessLogic.csproj": {}
+    "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\BusinessLogic\\BusinessLogic.csproj": {}
   },
   "projects": {
-    "C:\\visual studio codes\\WebGames\\BusinessLogic\\BusinessLogic.csproj": {
+    "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\BusinessLogic\\BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\visual studio codes\\WebGames\\BusinessLogic\\BusinessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\BusinessLogic\\BusinessLogic.csproj",
         "projectName": "BusinessLogic",
-        "projectPath": "C:\\visual studio codes\\WebGames\\BusinessLogic\\BusinessLogic.csproj",
+        "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\BusinessLogic\\BusinessLogic.csproj",
         "packagesPath": "C:\\Users\\burcu\\.nuget\\packages\\",
-        "outputPath": "C:\\visual studio codes\\WebGames\\BusinessLogic\\obj\\",
+        "outputPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,14 +33,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\visual studio codes\\WebGames\\Core\\Core.csproj": {
-                "projectPath": "C:\\visual studio codes\\WebGames\\Core\\Core.csproj"
+              "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\Core.csproj"
               },
-              "C:\\visual studio codes\\WebGames\\Data\\Data.csproj": {
-                "projectPath": "C:\\visual studio codes\\WebGames\\Data\\Data.csproj"
+              "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Data\\Data.csproj"
               },
-              "C:\\visual studio codes\\WebGames\\Utilities\\Utilities.csproj": {
-                "projectPath": "C:\\visual studio codes\\WebGames\\Utilities\\Utilities.csproj"
+              "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj"
               }
             }
           }
@@ -110,14 +110,14 @@
         }
       }
     },
-    "C:\\visual studio codes\\WebGames\\Core\\Core.csproj": {
+    "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\visual studio codes\\WebGames\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\visual studio codes\\WebGames\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\burcu\\.nuget\\packages\\",
-        "outputPath": "C:\\visual studio codes\\WebGames\\Core\\obj\\",
+        "outputPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -139,8 +139,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\visual studio codes\\WebGames\\Utilities\\Utilities.csproj": {
-                "projectPath": "C:\\visual studio codes\\WebGames\\Utilities\\Utilities.csproj"
+              "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj"
               }
             }
           }
@@ -186,14 +186,14 @@
         }
       }
     },
-    "C:\\visual studio codes\\WebGames\\Data\\Data.csproj": {
+    "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\visual studio codes\\WebGames\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\visual studio codes\\WebGames\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\burcu\\.nuget\\packages\\",
-        "outputPath": "C:\\visual studio codes\\WebGames\\Data\\obj\\",
+        "outputPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -215,11 +215,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\visual studio codes\\WebGames\\Core\\Core.csproj": {
-                "projectPath": "C:\\visual studio codes\\WebGames\\Core\\Core.csproj"
+              "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\Core.csproj"
               },
-              "C:\\visual studio codes\\WebGames\\Utilities\\Utilities.csproj": {
-                "projectPath": "C:\\visual studio codes\\WebGames\\Utilities\\Utilities.csproj"
+              "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj"
               }
             }
           }
@@ -265,14 +265,14 @@
         }
       }
     },
-    "C:\\visual studio codes\\WebGames\\Utilities\\Utilities.csproj": {
+    "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\visual studio codes\\WebGames\\Utilities\\Utilities.csproj",
+        "projectUniqueName": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj",
         "projectName": "Utilities",
-        "projectPath": "C:\\visual studio codes\\WebGames\\Utilities\\Utilities.csproj",
+        "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj",
         "packagesPath": "C:\\Users\\burcu\\.nuget\\packages\\",
-        "outputPath": "C:\\visual studio codes\\WebGames\\Utilities\\obj\\",
+        "outputPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

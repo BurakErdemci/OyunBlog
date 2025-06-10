@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AS94payQ0JU=",
+  "dgSpecHash": "JFvGAC0BT3k=",
   "success": true,
-  "projectFilePath": "C:\\visual studio codes\\WebGames\\MainPage\\MainPage.csproj",
+  "projectFilePath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\MainPage\\MainPage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\burcu\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\burcu\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

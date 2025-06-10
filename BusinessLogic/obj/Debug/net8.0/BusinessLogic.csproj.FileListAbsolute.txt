@@ -17,3 +17,22 @@ C:\visual studio codes\WebGames\BusinessLogic\obj\Debug\net8.0\BusinessLogic.dll
 C:\visual studio codes\WebGames\BusinessLogic\obj\Debug\net8.0\refint\BusinessLogic.dll
 C:\visual studio codes\WebGames\BusinessLogic\obj\Debug\net8.0\BusinessLogic.pdb
 C:\visual studio codes\WebGames\BusinessLogic\obj\Debug\net8.0\ref\BusinessLogic.dll
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\bin\Debug\net8.0\BusinessLogic.deps.json
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\bin\Debug\net8.0\BusinessLogic.dll
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\bin\Debug\net8.0\BusinessLogic.pdb
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\bin\Debug\net8.0\Core.dll
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\bin\Debug\net8.0\Data.dll
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\bin\Debug\net8.0\Utilities.dll
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\bin\Debug\net8.0\Core.pdb
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\bin\Debug\net8.0\Data.pdb
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\bin\Debug\net8.0\Utilities.pdb
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\obj\Debug\net8.0\BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\obj\Debug\net8.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\obj\Debug\net8.0\BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\obj\Debug\net8.0\BusinessLogic.AssemblyInfo.cs
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\obj\Debug\net8.0\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\obj\Debug\net8.0\Business.CF5D6E35.Up2Date
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\obj\Debug\net8.0\BusinessLogic.dll
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\obj\Debug\net8.0\refint\BusinessLogic.dll
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\obj\Debug\net8.0\BusinessLogic.pdb
+C:\Users\burcu\Desktop\OyunBlog-main\BusinessLogic\obj\Debug\net8.0\ref\BusinessLogic.dll
