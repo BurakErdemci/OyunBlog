@@ -1,4 +1,4 @@
-# WebGames Forum/Blog Projesi - Backend (ASP.NET Core) Detaylı Açıklama
+# OyunBlog Projesi - Backend (ASP.NET Core) Detaylı Açıklama
 
 ## Genel Bakış
 
