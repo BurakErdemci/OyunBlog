@@ -165,7 +165,7 @@ using (var scope = app.Services.CreateScope())
 
 
 
-## Kurulum ve Çalıştırma(Şuan için sadece 4. madde yeterli)
+## Kurulum ve Çalıştırma
 
  
   
@@ -187,15 +187,35 @@ using (var scope = app.Services.CreateScope())
 
 Proje ile ilgili Görseller:
 
-1-Login Register Ekranları:![image](https://github.com/user-attachments/assets/ccb376f8-edfd-4d5b-b225-931f31d147f2) 
-![image](https://github.com/user-attachments/assets/e69050cd-1b72-4f21-b7a4-6e74c6fbd3c0)
+1-Login Register Ekranları:<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ac361b8c-4f24-49c9-89bb-35794dda8b04" />
 
-2-Forum Ekranı:![image](https://github.com/user-attachments/assets/737358e1-d5be-4248-a3a0-53600fe1404e)
 
-3-API ile çekilen haber ve indirim sayfaları ![image](https://github.com/user-attachments/assets/8a534ab2-e295-446c-a3da-310fdcf304cf) 
-![image](https://github.com/user-attachments/assets/2f9f0305-11a2-4d7d-abbd-d3a5a1937b07)
 
-4-Ana sayfa: ![image](https://github.com/user-attachments/assets/b2ad3d2a-378c-4570-98fd-e1bd5d9072b0)
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/695154e1-63be-4270-8f0e-3092e03238f0" />
+
+
+
+
+
+2-Forum Ekranı:<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/a274c042-b6ef-4f83-aba1-8183aabec46c" />
+
+
+3-API ile çekilen haber ve indirim sayfaları <img width="1891" height="1079" alt="image" src="https://github.com/user-attachments/assets/257f69a0-ef12-46be-bae4-148cae78ffb2" />
+
+
+
+
+
+<img width="1914" height="1079" alt="image" src="https://github.com/user-attachments/assets/d347a5b7-3460-4549-9826-2cddd06dfba4" />
+
+
+
+
+
+
+4-Ana sayfa: <img width="1901" height="521" alt="image" src="https://github.com/user-attachments/assets/e15b818e-7e17-42d3-875f-d7a454e6f5e2" />
+
 
 
 
