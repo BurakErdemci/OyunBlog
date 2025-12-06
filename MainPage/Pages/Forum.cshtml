@@ -1,119 +1,168 @@
 @page
 @model MainPage.Pages.ForumModel
-
 @{
     ViewData["Title"] = "Forum";
+    var searchQuery = Request.Query["q"].ToString();
 }
 
-<div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1>Forum</h1>
-        @if (User.Identity.IsAuthenticated)
-        {
-            <a asp-page="/CreateTopic" class="btn btn-primary">Yeni Konu Oluştur</a>
-        }
-    </div>
+<div class="container py-5">
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-body">
-                    @if (!Model.Topics.Any())
-                    {
-                        <p class="text-center">Henüz hiç konu oluşturulmamış.</p>
-                    }
-                    else
-                    {
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Konu</th>
-                                        <th>Kategori</th>
-                                        <th>Yazar</th>
-                                        <th>Yanıtlar</th>
-                                        <th>Görüntülenme</th>
-                                        <th>Tarih</th>
-                                        @if (User.IsInRole("Admin"))
-                                        {
-                                            <th>İşlemler</th>
-                                        }
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var topic in Model.Topics)
-                                    {
-                                        <tr>
-                                            <td>
-                                                <a asp-page="/Topic" asp-route-id="@topic.Id" class="text-decoration-none">
-                                                    @topic.Title
-                                                </a>
-                                            </td>
-                                            <td>@topic.CategoryName</td>
-                                            <td>@topic.UserName</td>
-                                            <td>@topic.ReplyCount</td>
-                                            <td>@topic.ViewCount</td>
-                                            <td>@topic.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
-                                            @if (User.IsInRole("Admin"))
-                                            {
-                                                <td>
-                                                    <a asp-page="/EditTopic" asp-route-id="@topic.Id" class="btn btn-warning btn-sm">Düzenle</a>
-                                                    <form method="post" asp-page-handler="Delete" asp-route-id="@topic.Id" style="display:inline;">
-                                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bu konuyu silmek istediğinize emin misiniz?');">Sil</button>
-                                                    </form>
-                                                </td>
-                                            }
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
-                        </div>
-                    }
+    <!-- Üst Kısım: Başlık ve Butonlar -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="fw-bold text-dark mb-0"><i class="fa-solid fa-comments text-primary me-2"></i>Forum</h1>
+            <p class="text-muted small mb-0">Toplulukla tartış, soru sor ve paylaş.</p>
+        </div>
+
+        <div class="d-flex gap-2 mt-3 mt-md-0">
+            <!-- Arama Formu -->
+            <form method="get" class="d-flex">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Konu ara..." value="@searchQuery">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="fa-solid fa-search"></i></button>
                 </div>
-            </div>
+            </form>
+
+            <!-- Konu Aç Butonu -->
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a href="/CreateTopic" class="btn btn-gradient fw-bold text-white shadow-sm">
+                    <i class="fa-solid fa-plus me-1"></i> Yeni Konu
+                </a>
+            }
         </div>
     </div>
-    @if (Model.TotalPages > 1)
-    {
-        <nav aria-label="Forum sayfalama">
-            <ul class="pagination justify-content-center" style="margin-top:2rem; border:2px solid #e53935; border-radius:12px; padding:0.5rem 1.5rem; background:#fff;">
-                <li class="page-item @(Model.CurrentPage == 1 ? "disabled" : "")">
-                    @if (Model.CurrentPage == 1)
+
+    <!-- Tablo Alanı -->
+    <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="bg-light">
+                    <tr>
+                        <th scope="col" class="py-3 ps-4">Konu</th>
+                        <th scope="col" class="py-3">Kategori</th>
+                        <th scope="col" class="py-3">Yazar</th>
+                        <th scope="col" class="py-3 text-center">Yanıtlar</th>
+                        <th scope="col" class="py-3 text-center">Görüntülenme</th>
+                        <th scope="col" class="py-3 pe-4 text-end">Tarih</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Topics != null && Model.Topics.Any())
                     {
-                        <span class="page-link" style="color:#e53935; border:none; background:transparent; font-weight:600;">Önceki</span>
+                        foreach (var topic in Model.Topics)
+                        {
+                            <tr>
+                                <!-- Konu Başlığı (DÜZELTİLDİ: asp-page kullanımı) -->
+                                <td class="ps-4">
+                                    <a asp-page="/Topic" asp-route-id="@topic.Id" class="text-decoration-none fw-bold text-dark fs-5 topic-link">
+                                        @topic.Title
+                                    </a>
+                                </td>
+                                <!-- Kategori -->
+                                <td>
+                                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill">
+                                        @topic.CategoryName
+                                    </span>
+                                </td>
+                                <!-- Yazar -->
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-2" style="width:30px; height:30px; font-size:12px;">
+                                            @(!string.IsNullOrEmpty(topic.UserName) ? topic.UserName.Substring(0, 1).ToUpper() : "U")
+                                        </div>
+                                        <span class="small fw-semibold">@topic.UserName</span>
+                                    </div>
+                                </td>
+                                <!-- Yanıt Sayısı -->
+                                <td class="text-center">
+                                    <span class="badge bg-light text-secondary rounded-pill border">
+                                        <i class="fa-regular fa-comment me-1"></i> @topic.ReplyCount
+                                    </span>
+                                </td>
+                                <!-- Görüntülenme -->
+                                <td class="text-center text-muted small">
+                                    <i class="fa-regular fa-eye me-1"></i> @topic.ViewCount
+                                </td>
+                                <!-- Tarih -->
+                                <td class="text-end pe-4 text-muted small">
+                                    @topic.CreatedAt.ToString("dd.MM.yyyy HH:mm")
+                                </td>
+                            </tr>
+                        }
                     }
                     else
                     {
-                        <a class="page-link" style="color:#e53935; border:none; background:transparent; font-weight:600;"
-                           href="@(string.IsNullOrEmpty(Request.Query["q"]) ? $"?page={Model.CurrentPage - 1}" : $"?q={Request.Query["q"]}&page={Model.CurrentPage - 1}")">Önceki</a>
+                        <tr>
+                            <td colspan="6" class="text-center py-5 text-muted">
+                                <i class="fa-regular fa-folder-open fa-3x mb-3 d-block"></i>
+                                Henüz hiç konu açılmamış veya aradığınız kriterde konu yok.
+                            </td>
+                        </tr>
                     }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Pagination (DÜZELTİLDİ: Manuel href kullanımı) -->
+    @if (Model.TotalPages > 1)
+    {
+        <nav aria-label="Page navigation" class="mt-4">
+            <ul class="pagination justify-content-center">
+
+                <!-- Önceki Sayfa -->
+                <li class="page-item @(Model.CurrentPage <= 1 ? "disabled" : "")">
+                    <a class="page-link border-0 shadow-sm rounded-circle mx-1 d-flex justify-content-center align-items-center"
+                       style="width: 40px; height: 40px;"
+                       href="?page=@(Model.CurrentPage - 1)&q=@searchQuery">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
                 </li>
+
+                <!-- Sayfa Numaraları -->
                 @for (int i = 1; i <= Model.TotalPages; i++)
                 {
                     <li class="page-item @(Model.CurrentPage == i ? "active" : "")">
-                        @if (Model.CurrentPage == i)
-                        {
-                            <span class="page-link" style="color:#fff; background:#e53935; border:none; font-weight:600; border-radius:6px; transition:all 0.2s;">@i</span>
-                        }
-                        else
-                        {
-                            <a class="page-link" style="color:#e53935; background:transparent; border:none; font-weight:600; border-radius:6px; transition:all 0.2s;"
-                               href="@(string.IsNullOrEmpty(Request.Query["q"]) ? $"?page={i}" : $"?q={Request.Query["q"]}&page={i}")">@i</a>
-                        }
+                        <a class="page-link border-0 shadow-sm rounded-circle mx-1 d-flex justify-content-center align-items-center fw-bold"
+                           style="width: 40px; height: 40px;"
+                           href="?page=@i&q=@searchQuery">
+                            @i
+                        </a>
                     </li>
                 }
-                <li class="page-item @(Model.CurrentPage == Model.TotalPages ? "disabled" : "")">
-                    @if (Model.CurrentPage == Model.TotalPages)
-                    {
-                        <span class="page-link" style="color:#e53935; border:none; background:transparent; font-weight:600;">Sonraki</span>
-                    }
-                    else
-                    {
-                        <a class="page-link" style="color:#e53935; border:none; background:transparent; font-weight:600;"
-                           href="@(string.IsNullOrEmpty(Request.Query["q"]) ? $"?page={Model.CurrentPage + 1}" : $"?q={Request.Query["q"]}&page={Model.CurrentPage + 1}")">Sonraki</a>
-                    }
+
+                <!-- Sonraki Sayfa -->
+                <li class="page-item @(Model.CurrentPage >= Model.TotalPages ? "disabled" : "")">
+                    <a class="page-link border-0 shadow-sm rounded-circle mx-1 d-flex justify-content-center align-items-center"
+                       style="width: 40px; height: 40px;"
+                       href="?page=@(Model.CurrentPage + 1)&q=@searchQuery">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
                 </li>
             </ul>
         </nav>
     }
-</div> 
+</div>
+
+<style>
+    .topic-link:hover {
+        color: #4f46e5 !important;
+        text-decoration: underline !important;
+    }
+
+    .page-item.active .page-link {
+        background-color: #4f46e5;
+        border-color: #4f46e5;
+        color: white;
+    }
+
+    .page-link {
+        color: #1f2937;
+    }
+
+        .page-link:hover {
+            background-color: #e5e7eb;
+            color: #4f46e5;
+        }
+</style>

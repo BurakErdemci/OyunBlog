@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tc0s2a001/g=",
+  "dgSpecHash": "c1xNFGLM4DI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Users\\burcu\\Source\\Repos\\OyunBlog\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\burcu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.16\\microsoft.aspnetcore.cryptography.internal.8.0.16.nupkg.sha512",
     "C:\\Users\\burcu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.16\\microsoft.aspnetcore.cryptography.keyderivation.8.0.16.nupkg.sha512",

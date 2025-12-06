@@ -22,3 +22,16 @@ C:\Users\burcu\Desktop\OyunBlog-main\Utilities\obj\Debug\net8.0\Utilities.dll
 C:\Users\burcu\Desktop\OyunBlog-main\Utilities\obj\Debug\net8.0\refint\Utilities.dll
 C:\Users\burcu\Desktop\OyunBlog-main\Utilities\obj\Debug\net8.0\Utilities.pdb
 C:\Users\burcu\Desktop\OyunBlog-main\Utilities\obj\Debug\net8.0\ref\Utilities.dll
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\bin\Debug\net8.0\Utilities.deps.json
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\bin\Debug\net8.0\Utilities.dll
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\bin\Debug\net8.0\Utilities.pdb
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\obj\Debug\net8.0\Utilities.csproj.AssemblyReference.cache
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\obj\Debug\net8.0\Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\obj\Debug\net8.0\Utilities.AssemblyInfoInputs.cache
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\obj\Debug\net8.0\Utilities.AssemblyInfo.cs
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\obj\Debug\net8.0\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\obj\Debug\net8.0\Utilities.sourcelink.json
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\obj\Debug\net8.0\Utilities.dll
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\obj\Debug\net8.0\refint\Utilities.dll
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\obj\Debug\net8.0\Utilities.pdb
+C:\Users\burcu\Source\Repos\OyunBlog\Utilities\obj\Debug\net8.0\ref\Utilities.dll

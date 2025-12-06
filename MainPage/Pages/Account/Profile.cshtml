@@ -1,51 +1,89 @@
 @page
 @model MainPage.Pages.Account.ProfileModel
 @{
-    ViewData["Title"] = "Profil";
+    ViewData["Title"] = "Profil Ayarlarý";
+    // Kullanýcýnýn baþ harfini avatar yapmak için alýyoruz (boþsa 'U' olsun)
+    var userInitial = !string.IsNullOrEmpty(Model.Input.UserName) ? Model.Input.UserName.Substring(0, 1).ToUpper() : "U";
 }
 
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="mb-0">Profil Bilgileri</h2>
-                </div>
-                <div class="card-body">
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+
+            <!-- Profil Kartý -->
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                <!-- Üst Dekoratif Alan (Opsiyonel renkli þerit) -->
+                <div class="bg-primary p-3" style="height: 100px; background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);"></div>
+
+                <div class="card-body p-4 p-md-5 pt-0 position-relative">
+
+                    <!-- Avatar Alaný (Yuvarlak Baþ Harf) -->
+                    <div class="d-flex justify-content-center position-relative" style="margin-top: -50px;">
+                        <div class="bg-white p-1 rounded-circle shadow-sm">
+                            <div class="bg-dark text-white rounded-circle d-flex justify-content-center align-items-center fs-1 fw-bold"
+                                 style="width: 100px; height: 100px; border: 4px solid #fff;">
+                                @userInitial
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-3 mb-4">
+                        <h2 class="fw-bold text-dark">Profil Bilgileri</h2>
+                        <p class="text-muted small">Hesap bilgilerinizi buradan güncelleyebilirsiniz.</p>
+                    </div>
+
+                    <!-- Baþarý Mesajý -->
                     @if (TempData["StatusMessage"] != null)
                     {
-                        <div class="alert alert-success">
-                            @TempData["StatusMessage"]
+                        <div class="alert alert-success alert-dismissible fade show rounded-3 shadow-sm" role="alert">
+                            <i class="fa-solid fa-check-circle me-2"></i> @TempData["StatusMessage"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     }
 
                     <form method="post">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger rounded-3" role="alert"></div>
 
-                        <div class="form-group mb-3">
-                            <label asp-for="Input.UserName" class="form-label"></label>
-                            <input asp-for="Input.UserName" class="form-control" />
-                            <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                        <!-- Kullanýcý Adý -->
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.UserName" class="form-control rounded-3" placeholder="Kullanýcý Adý" />
+                            <label asp-for="Input.UserName"><i class="fa-solid fa-user me-2 text-muted"></i>Kullanýcý Adý</label>
+                            <span asp-validation-for="Input.UserName" class="text-danger small ms-1"></span>
                         </div>
 
-                        <div class="form-group mb-3">
-                            <label asp-for="Input.Email" class="form-label"></label>
-                            <input asp-for="Input.Email" class="form-control" />
-                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        <!-- E-posta -->
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Email" class="form-control rounded-3" placeholder="name@example.com" />
+                            <label asp-for="Input.Email"><i class="fa-solid fa-envelope me-2 text-muted"></i>E-posta Adresi</label>
+                            <span asp-validation-for="Input.Email" class="text-danger small ms-1"></span>
                         </div>
 
-                        <div class="form-group mb-3">
-                            <label asp-for="Input.PhoneNumber" class="form-label"></label>
-                            <input asp-for="Input.PhoneNumber" class="form-control" />
-                            <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                        <!-- Telefon Numarasý -->
+                        <div class="form-floating mb-4">
+                            <input asp-for="Input.PhoneNumber" class="form-control rounded-3" placeholder="Telefon" />
+                            <label asp-for="Input.PhoneNumber"><i class="fa-solid fa-phone me-2 text-muted"></i>Telefon Numarasý</label>
+                            <span asp-validation-for="Input.PhoneNumber" class="text-danger small ms-1"></span>
                         </div>
 
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <!-- Kaydet Butonu -->
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary py-3 rounded-3 fw-bold fs-5 shadow-sm"
+                                    style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); border: none;">
+                                <i class="fa-solid fa-save me-2"></i>Deðiþiklikleri Kaydet
+                            </button>
                         </div>
                     </form>
+
                 </div>
             </div>
+
+            <!-- Alt Bilgi / Güvenlik Linki -->
+            <div class="text-center mt-4">
+                <a href="#" class="text-decoration-none text-muted small hover-primary">
+                    <i class="fa-solid fa-shield-alt me-1"></i> Þifreni mi deðiþtirmek istiyorsun?
+                </a>
+            </div>
+
         </div>
     </div>
 </div>

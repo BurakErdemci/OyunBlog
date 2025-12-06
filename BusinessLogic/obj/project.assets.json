@@ -3261,11 +3261,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\BusinessLogic\\BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\burcu\\Source\\Repos\\OyunBlog\\BusinessLogic\\BusinessLogic.csproj",
       "projectName": "BusinessLogic",
-      "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\BusinessLogic\\BusinessLogic.csproj",
+      "projectPath": "C:\\Users\\burcu\\Source\\Repos\\OyunBlog\\BusinessLogic\\BusinessLogic.csproj",
       "packagesPath": "C:\\Users\\burcu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\BusinessLogic\\obj\\",
+      "outputPath": "C:\\Users\\burcu\\Source\\Repos\\OyunBlog\\BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3287,14 +3287,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Core\\Core.csproj"
+            "C:\\Users\\burcu\\Source\\Repos\\OyunBlog\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\burcu\\Source\\Repos\\OyunBlog\\Core\\Core.csproj"
             },
-            "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Data\\Data.csproj"
+            "C:\\Users\\burcu\\Source\\Repos\\OyunBlog\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\burcu\\Source\\Repos\\OyunBlog\\Data\\Data.csproj"
             },
-            "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj": {
-              "projectPath": "C:\\Users\\burcu\\Desktop\\OyunBlog-main\\Utilities\\Utilities.csproj"
+            "C:\\Users\\burcu\\Source\\Repos\\OyunBlog\\Utilities\\Utilities.csproj": {
+              "projectPath": "C:\\Users\\burcu\\Source\\Repos\\OyunBlog\\Utilities\\Utilities.csproj"
             }
           }
         }
@@ -3309,7 +3309,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -3360,7 +3360,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

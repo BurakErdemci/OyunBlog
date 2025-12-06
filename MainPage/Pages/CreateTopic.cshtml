@@ -1,43 +1,59 @@
 @page
 @model MainPage.Pages.CreateTopicModel
-@using Microsoft.AspNetCore.Identity
-
 @{
-    ViewData["Title"] = "Yeni Konu Oluştur";
+    ViewData["Title"] = "Yeni Konu Başlat";
 }
 
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="mb-0">Yeni Konu Oluştur</h2>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="p-4 text-white text-center" style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);">
+                    <h2 class="fw-bold mb-1"><i class="fa-solid fa-pen-to-square me-2"></i>Yeni Konu Oluştur</h2>
+                    <p class="mb-0 opacity-75">Toplulukla paylaşmak istediğin konuyu başlat.</p>
                 </div>
-                <div class="card-body">
+
+                <div class="card-body p-4 p-md-5">
                     <form method="post">
-                        <div class="form-group mb-3">
-                            <label asp-for="Topic.Title" class="control-label">Başlık</label>
-                            <input asp-for="Topic.Title" class="form-control" required />
-                            <span asp-validation-for="Topic.Title" class="text-danger"></span>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger rounded-3" role="alert"></div>
+
+                        <!-- Başlık -->
+                        <div class="form-floating mb-3">
+                            <input asp-for="Topic.Title" class="form-control rounded-3" placeholder="Konu Başlığı" />
+                            <label asp-for="Topic.Title" class="text-muted"><i class="fa-solid fa-heading me-2"></i>Konu Başlığı</label>
+                            <span asp-validation-for="Topic.Title" class="text-danger small ms-1"></span>
                         </div>
 
-                        <div class="form-group mb-3">
-                            <label asp-for="Topic.CategoryId" class="control-label">Kategori</label>
-                            <select asp-for="Topic.CategoryId" class="form-control" asp-items="Model.CategoryList">
-                                <option value="0">Kategori Seçin</option>
+                        <!-- Kategori Seçimi -->
+                        <div class="form-floating mb-3">
+                            <!-- DÜZELTME BURADA: SelectList Oluşturuyoruz -->
+                            <!-- Model.Categories senin backendindeki List<ForumCategory> -->
+                            <!-- "Id" value olacak, "Name" ise ekranda görünen isim -->
+                            <select asp-for="Topic.CategoryId" class="form-select rounded-3"
+                                    asp-items="@(new SelectList(Model.Categories, "Id", "Name"))">
+                                <option value="" disabled selected>Kategori Seçiniz</option>
                             </select>
-                            <span asp-validation-for="Topic.CategoryId" class="text-danger"></span>
+                            <label asp-for="Topic.CategoryId" class="text-muted"><i class="fa-solid fa-layer-group me-2"></i>Kategori</label>
+                            <span asp-validation-for="Topic.CategoryId" class="text-danger small ms-1"></span>
                         </div>
 
-                        <div class="form-group mb-3">
-                            <label asp-for="Topic.Content" class="control-label">İçerik</label>
-                            <textarea asp-for="Topic.Content" class="form-control" rows="10" required></textarea>
-                            <span asp-validation-for="Topic.Content" class="text-danger"></span>
+                        <!-- İçerik -->
+                        <div class="mb-4">
+                            <label asp-for="Topic.Content" class="form-label text-muted ms-1 small fw-bold">İçerik</label>
+                            <textarea asp-for="Topic.Content" class="form-control rounded-3 p-3" rows="8" placeholder="Düşüncelerini buraya yaz..." style="resize: vertical;"></textarea>
+                            <span asp-validation-for="Topic.Content" class="text-danger small ms-1"></span>
                         </div>
 
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Konu Oluştur</button>
-                            <a asp-page="/Forum" class="btn btn-secondary">İptal</a>
+                        <!-- Butonlar -->
+                        <div class="d-flex gap-2 pt-2">
+                            <button type="submit" class="btn btn-primary py-2 px-4 rounded-3 fw-bold shadow-sm"
+                                    style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); border: none;">
+                                <i class="fa-solid fa-paper-plane me-2"></i>Konuyu Yayınla
+                            </button>
+                            <a href="/Forum" class="btn btn-light py-2 px-4 rounded-3 border fw-semibold text-muted">
+                                İptal Et
+                            </a>
                         </div>
                     </form>
                 </div>
@@ -45,18 +61,3 @@
         </div>
     </div>
 </div>
-
-@if (!ViewData.ModelState.IsValid)
-{
-    <div class="alert alert-danger">
-        Lütfen eksik veya hatalı alanları düzeltin.<br />
-        @foreach (var modelError in ViewData.ModelState.Values.SelectMany(v => v.Errors))
-        {
-            <div class="text-danger">@modelError.ErrorMessage</div>
-        }
-    </div>
-}
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-} 

@@ -4,40 +4,66 @@
     ViewData["Title"] = "Kayıt Ol";
 }
 
-<h2>Kayıt Ol</h2>
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="col-md-6 col-lg-5">
+        <div class="card border-0 shadow-lg rounded-4">
+            <div class="card-body p-5">
 
-@if (!ViewData.ModelState.IsValid)
-{
-    <div style="color:red;">
-        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
-        {
-            <div>@error.ErrorMessage</div>
-        }
-    </div>
-}
+                <!-- Başlık -->
+                <div class="text-center mb-4">
+                    <div class="bg-primary-subtle text-primary rounded-circle d-inline-flex justify-content-center align-items-center mb-3" style="width: 60px; height: 60px;">
+                        <i class="fa-solid fa-user-plus fa-xl"></i>
+                    </div>
+                    <h2 class="fw-bold text-dark">Aramıza Katıl</h2>
+                    <p class="text-muted small">Oyun dünyasının ayrıcalıklarından yararlanmak için hesap oluştur.</p>
+                </div>
 
-<form method="post">
-    @Html.AntiForgeryToken()
-    <div>
-        <label for="UserName">Kullanıcı Adı</label>
-        <input type="text" id="UserName" name="UserName" asp-for="UserName" required />
-    </div>
-    <div>
-        <label for="Email">E-posta</label>
-        <input type="email" id="Email" name="Email" asp-for="Email" required />
-    </div>
-    <div>
-        <label for="Password">Şifre</label>
-        <input type="password" id="Password" name="Password" asp-for="Password" required />
-    </div>
-    <div>
-        <label for="ConfirmPassword">Şifre Tekrar</label>
-        <input type="password" id="ConfirmPassword" name="ConfirmPassword" asp-for="ConfirmPassword" required />
-    </div>
-    <button type="submit">Kayıt Ol</button>
-</form>
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
 
-<a href="/Account/Login">Giriş Yap</a>
+                    <!-- Kullanıcı Adı -->
+                    <div class="form-floating mb-3">
+                        <input asp-for="UserName" class="form-control rounded-3" placeholder="Kullanıcı Adı" />
+                        <label asp-for="UserName"><i class="fa-solid fa-user me-2 text-muted"></i>Kullanıcı Adı</label>
+                        <span asp-validation-for="UserName" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-floating mb-3">
+                        <input asp-for="Email" class="form-control rounded-3" placeholder="name@example.com" type="email" />
+                        <label asp-for="Email"><i class="fa-solid fa-envelope me-2 text-muted"></i>E-posta Adresi</label>
+                        <span asp-validation-for="Email" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Şifre -->
+                    <div class="form-floating mb-3">
+                        <input asp-for="Password" class="form-control rounded-3" placeholder="Şifre" type="password" />
+                        <label asp-for="Password"><i class="fa-solid fa-lock me-2 text-muted"></i>Şifre</label>
+                        <span asp-validation-for="Password" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Şifre Tekrar -->
+                    <div class="form-floating mb-4">
+                        <input asp-for="ConfirmPassword" class="form-control rounded-3" placeholder="Şifre Tekrar" type="password" />
+                        <label asp-for="ConfirmPassword"><i class="fa-solid fa-check-double me-2 text-muted"></i>Şifre Tekrar</label>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Kayıt Ol Butonu -->
+                    <button type="submit" class="btn btn-gradient w-100 py-3 rounded-3 fw-bold fs-5 shadow-sm">
+                        Kayıt Ol <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </button>
+                </form>
+
+                <!-- Giriş Yap Linki -->
+                <div class="text-center mt-4">
+                    <span class="text-muted">Zaten bir hesabın var mı?</span>
+                    <a href="/Account/Login" class="text-decoration-none fw-bold text-primary ms-1">Giriş Yap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
